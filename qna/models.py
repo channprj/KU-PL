@@ -22,7 +22,7 @@ class Answer(models.Model):
     question = models.ForeignKey('qna.Question', related_name='answers')
     user = models.ForeignKey('auth.User')
     content = models.TextField()
-	### avoid reinventing the wheel, consider django packages someone maked it.
+    ### avoid reinventing the wheel, consider django packages someone maked it.
     # tag=models.ManyToManyField(Tag)
     created_date = models.DateTimeField(default=timezone.now)
     updated_date = models.DateTimeField(default=timezone.now, blank=True, null=True)
